@@ -1,0 +1,29 @@
+<div class="ui segment">
+  <h3>Readers' Comments </h3>
+  {{#each comments as |oneComment|}}
+    <div class="ui grid">
+      <div class="fourteen wide column">
+        <li>  {{oneComment.statement}}</li>
+      </div>
+      <div class="two wide column right aligned">
+        <button class="ui mini circular icon basic red button" {{action 'deleteComment' oneComment.id}}
+                title="Delete"><i class="remove icon"></i>
+        </button>
+      </div>
+    </div>
+  {{/each}}
+  <br>
+  <form class="ui form">
+    <div class="field">
+      <label>Add your comment</label>
+      {{input type="text"  value = statement}}
+    </div>
+    <br>
+    <button class="ui mini green button" {{action 'saveComment'}}> Save</button>
+  </form>
+
+</div>
+
+
+
+

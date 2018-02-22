@@ -1,0 +1,25 @@
+<div class="ui segment">
+  <img class="ui small centered  image" src="/assets/images/UWO_logo.png">
+</div>
+<div class="ui attached stackable inverted menu">
+  <a class="item"> {{#link-to 'home'}}
+    <i class="home icon"></i> Home
+  {{/link-to}}
+  </a>
+  <a class="item">{{#link-to 'posts'}}Posts{{/link-to}}</a>
+  <a class="item">{{#link-to 'contact'}}Contact{{/link-to}}</a>
+  <a class="right item">{{#link-to 'about'}}About{{/link-to}} </a>
+</div>
+<div class="ui container">
+{{outlet}}
+</div>
+<br>
+
+<div class="ui  padded grid" style="background-color: #36036d; color: #FFFFFF;">
+  <div class="fourteen wide column">
+    © Copyright – Shima Kananitodashki
+  </div>
+  <div class="two wide column">
+    <img class="ui centered aligned tiny image" src="/assets/images/UWO_Logo_Rev.png">
+  </div>
+</div>

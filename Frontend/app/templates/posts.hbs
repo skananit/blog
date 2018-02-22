@@ -1,0 +1,27 @@
+<br>
+<h2> Blog Posts </h2>
+
+{{#ui-accordion }}
+  {{#each model as |onePost|}}
+    <div class="ui grid">
+      <div class="twelve wide column">
+        <div class="title">
+          <i class="dropdown blue icon"></i>
+          {{onePost.title}}
+        </div>
+        <div class="content">
+          {{add-comment ID=onePost.id comments=onePost.comments}}
+        </div>
+      </div>
+      <div class="two wide column right aligned">
+        {{edit-post ID=onePost.id}}
+      </div>
+      <div class="two wide column left aligned">
+        {{delete-post ID=onePost.id}}
+      </div>
+    </div>
+  {{/each}}
+{{/ui-accordion}}
+
+
+{{add-new-post}}
